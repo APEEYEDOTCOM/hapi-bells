@@ -48,6 +48,7 @@ Disclaimer: This template was created by novice developers. We are not claiming 
 * Reply to hapi requests with a statusCode and optional headers - hapi-status by daanvanham https://github.com/daanvanham/hapi-status
 * Standard and secure cryptographic algorithms - crypto by Gozala https://github.com/Gozala/crypto
 * Simple, fast generation of RFC4122 UUIDS - node-uuid by kelektiv https://github.com/kelektiv/node-uuid
+* SDK Generation through Swagger (OpenAPI) Specification code generator featuring C# and Razor templates. Supports C#, Java, Node.js, TypeScript, Python and Ruby - autorest by Azure https://github.com/Azure/autorest 
 
 
 
