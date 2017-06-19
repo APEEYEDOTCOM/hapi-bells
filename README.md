@@ -28,7 +28,7 @@ Disclaimer: This template was created by novice developers. We are not claiming 
 ### What is included in the template? 
 #### Documentation
 * Interactive documentation compliant with the Open API Standard (OAS) - [hapi-swagger](https://github.com/glennjones/hapi-swagger/) by Glen Jones
-* Static Client Side SDK Documenttation - [swagger online editor](http://editor.swagger.io/#/) by Swagger
+* Static Client Side SDK Documenttation - [swagger online editor using HTML2 Client](http://editor.swagger.io/#/) by Swagger
 
 #### Request and Response Sanitization
 * Object schema validation - [joi](https://github.com/hapijs/joi) by hapijs 
@@ -89,11 +89,13 @@ With [npm](https://npmjs.org/) installed, run
 
     $ npm install hapi-bells
     
+Then, with [pm2](https://github.com/Unitech/pm2) installed, run
 
+    $ pm2 start startup.json
 
+To access the API Documentation, go to
 
-
-
+    $ http://localhost:8082
 
 
 
