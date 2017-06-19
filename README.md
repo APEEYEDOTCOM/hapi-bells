@@ -228,24 +228,104 @@ Side note: This SDK documentation process could probably be automated by running
 
 ### Request and Response Sanitization
 #### Plugins and Tools used 
-* Object schema validation - [joi](https://github.com/hapijs/joi) by hapijs 
 * Request query, payload, and params sanitization for Hapi - [disinfect](https://github.com/genediazjr/disinfect) by genediazjr 
+* Object schema validation - [joi](https://github.com/hapijs/joi) by hapijs 
 * HTTP-friendly error objects - [boom](https://github.com/hapijs/boom) by hapijs 
 * Reply to hapi requests with a statusCode and optional headers - [hapi-status](https://github.com/daanvanham/hapi-status) by daanvanham 
 
 #### How it was implemented in the API Template
+The disinfect plugin gives the template the ability to implement custom sanitization and per-route configuration. Plugins used in the template, must first be registered in the api_server.js file.  
 
+```Javascript
+// register plug-ins
+server.register([
+    Inert,
+    Vision,
+    Blipp,
+	{
+		    register: require('disinfect'),
+			options: {
+				disinfectQuery: true,
+				disinfectParams: true,
+				disinfectPayload: true
+			}
+	},	
+    ], function (err) {
+
+        server.start(function(){
+            console.log('Server running at:', server.info.uri);
+			
+        });
+    });
+
+```
+
+Once the plugin is registered, it is available to the API routes. 
+
+```Javascript
+	{ /*/System/API_Ping/*/
+		method: 'GET',
+		path: '/System/API_Ping/',
+		config: {
+		   plugins: {
+				disinfect: {
+					disinfectQuery: true,
+					disinfectParams: true,
+					disinfectPayload: true
+				}	
+			},
+	handler:  systemEndpoints.API_Ping,
+	description: 'API Heartbeat Monitoring',
+	notes : 'Endpoint used for Heartbeat Monitoring. Monitoring will use this endpoint to check if the API is up and available.',
+			tags: ['api']
+		},
+	}
+```
 ### CORS Support
 #### Plugins and Tools used 
 * Extension to enable CORS for hapi - [hapi-cors-headers](https://github.com/gr2m/hapi-cors-headers) by gr2m 
 
 #### How it was implemented in the API Template
+CORS support has been implemented in the api_server.js file to enables CORS on all server responses, securely from all origins, with access-control-allow-credentials: true. The plugin hapi-cors-headers extends the hapi server to include CORS headers in all responses.  
+
+```Javascript
+const corsHeaders = require('hapi-cors-headers');
+
+...
+
+ 
+//Adds cors support
+server.ext('onPreResponse', corsHeaders);
+
+```
 
 ### Performance Measurements
 #### Plugins and Tools used 
 * Response time plugin for hapi - [hapi-response-time](https://github.com/pankajpatel/hapi-response-time) by pankajpatel 
 
 #### How it was implemented in the API Template
+The hapi-response-time plugin is registered in the api_server.js file. 
+
+```Javascript
+server.register([
+    Inert,
+    Vision,
+    Blipp,
+	{
+	  register: require('hapi-response-time')
+	},
+    ], function (err) {
+
+        server.start(function(){
+            console.log('Server running at:', server.info.uri);
+			
+        });
+    });
+```
+This plugin will add following headers to each request. The time represented is in the UNIX/Epoch time.
+* x-req-time: The time on which request is received on server
+* x-res-end: The time before sending the response
+* x-response-time: The difference between above two, i.e. the time taken by server to process the request before sending the response
 
 ### Policies
 #### Plugins and Tools used 
