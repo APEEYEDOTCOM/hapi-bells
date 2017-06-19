@@ -15,6 +15,7 @@ A Hapi API template with cross cutting concerns baked into the template
    * [Purpose](#purpose)
    * [Usage](#usage)
    * [What is included in the template?](#what-is-included-in-the-template)
+   * [Template Structure](#template-structure)
 * [Template Features and Examples](#template-features-and-examples)
    * [Documentation](#documentation)
    * [Request and Response Sanitization](#request-and-response-sanitization)
@@ -83,47 +84,48 @@ Key features included into the template include
 * Logging
 * Load Balancing
 
+### Template Structure
 
-### Template Features and Examples
-#### Documentation
+## Template Features and Examples
+### Documentation
 * Interactive documentation compliant with the Open API Standard (OAS) - [hapi-swagger](https://github.com/glennjones/hapi-swagger/) by Glen Jones
 * Static Client Side SDK Documenttation - [swagger online editor using HTML2 Client](http://editor.swagger.io/#/) by Swagger
 
-#### Request and Response Sanitization
+### Request and Response Sanitization
 * Object schema validation - [joi](https://github.com/hapijs/joi) by hapijs 
 * Request query, payload, and params sanitization for Hapi - [disinfect](https://github.com/genediazjr/disinfect) by genediazjr 
 * HTTP-friendly error objects - [boom](https://github.com/hapijs/boom) by hapijs 
 * Reply to hapi requests with a statusCode and optional headers - [hapi-status](https://github.com/daanvanham/hapi-status) by daanvanham 
 
-#### CORS Support
+### CORS Support
 * Extension to enable CORS for hapi - [hapi-cors-headers](https://github.com/gr2m/hapi-cors-headers) by gr2m 
 
-#### Performance Measurements
+### Performance Measurements
 * Response time plugin for hapi - [hapi-response-time](https://github.com/pankajpatel/hapi-response-time) by pankajpatel 
 
-#### Policies
+### Policies
 * Policies for hapi routes - [mrhorse](https://github.com/mark-bradshaw/mrhorse) by mark-bradshaw 
 
-#### Proxy Filter
+### Proxy Filter
 * Plugin for setting the request.info.remoteAddress and request.info.remotePort based on the X-Forwarded-For and X-Forwarded-Port headers - [therealyou](https://github.com/briandela/therealyou) by briandela 
 
-#### Monitoring
+### Monitoring
 * Realtime Monitoring solution for hapi - [hapijs-status-monitor](https://github.com/ziyasal/hapijs-status-monitor) by ziyasal
 
-#### Security and Data Encryption
+### Security and Data Encryption
 * Simple Bearer authentication scheme plugin for hapi - [hapi-auth-bearer-token](https://github.com/johnbrett/hapi-auth-bearer-token) by johnbrett 
 * Standard and secure cryptographic algorithms - [crypto](https://github.com/Gozala/crypto) by Gozala 
 
-#### Storage
+### Storage
 * Asynchronous, non-blocking SQLite3 bindings for Node.js to store token and user information - [node-sqlite3](https://github.com/mapbox/node-sqlite3) by mapbox 
 
-#### CRON
+### CRON
 * A hapi plugin to setup cron jobs - [hapi-cron](https://github.com/antonsamper/hapi-cron) by antonsamper 
 
-#### Configuration 
+### Configuration 
 * Hierarchical configurations for your app deployments - [config](https://github.com/lorenwest/node-config) by lorenwest 
 
-#### Utilities
+### Utilities
 * Full featured promise library - [bluebird](https://github.com/petkaantonov/bluebird ) by petkaantonov 
 * Simplest way possible to make http calls - [request](https://github.com/request/request ) by request 
 * A hapi plugin to geo locate requests - [hapi-geo-locate](https://github.com/fs-opensource/hapi-geo-locate) by futurestud.io 
@@ -132,13 +134,13 @@ Key features included into the template include
 * Async utilities for node - [async](https://github.com/caolan/async) by caolan 
 * Simple, fast generation of RFC4122 UUIDS - [node-uuid](https://github.com/kelektiv/node-uuid) by kelektiv 
 
-#### SDK Generation
+### SDK Generation
 * SDK Generation through Swagger (OpenAPI) Specification code generator featuring C# and Razor templates. Supports C#, Java, Node.js, TypeScript, Python and Ruby - [autorest](https://github.com/Azure/autorest) by Azure 
 
-#### Logging
+### Logging
 * Logging capabilities provided by [pm2](https://github.com/Unitech/pm2) by keymetrics 
 
-#### Load Balancing
+### Load Balancing
 * Load Balancing capabilities provided by [pm2](https://github.com/Unitech/pm2) by keymetrics 
 
 
