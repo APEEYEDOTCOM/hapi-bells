@@ -31,7 +31,7 @@ Disclaimer: This template was created by novice developers. We are not claiming 
 #### Request and Response Sanitization
 * Object schema validation - [joi](https://github.com/hapijs/joi) by hapijs 
 * Request query, payload, and params sanitization for Hapi - [disinfect](https://github.com/genediazjr/disinfect) by genediazjr 
-* HTTP-friendly error objects - [boom]() by hapijs https://github.com/hapijs/boom
+* HTTP-friendly error objects - [boom](https://github.com/hapijs/boom) by hapijs 
 * Reply to hapi requests with a statusCode and optional headers - [hapi-status](https://github.com/daanvanham/hapi-status) by daanvanham 
 
 #### CORS Support
