@@ -243,11 +243,11 @@ server.register([
     Vision,
     Blipp,
 	{
-		    register: require('disinfect'),
-			options: {
-				disinfectQuery: true,
-				disinfectParams: true,
-				disinfectPayload: true
+	register: require('disinfect'),
+	  options: {
+		    disinfectQuery: true,
+		    disinfectParams: true,
+		    disinfectPayload: true
 			}
 	},	
     ], function (err) {
@@ -268,10 +268,10 @@ Once the plugin is registered, it is available to the API routes.
 		path: '/System/API_Ping/',
 		config: {
 		   plugins: {
-				disinfect: {
-					disinfectQuery: true,
-					disinfectParams: true,
-					disinfectPayload: true
+			disinfect: {
+			  disinfectQuery: true,
+			  disinfectParams: true,
+			  disinfectPayload: true
 				}	
 			},
 	handler:  systemEndpoints.API_Ping,
@@ -332,6 +332,71 @@ This plugin will add following headers to each request. The time represented is 
 * Policies for hapi routes - [mrhorse](https://github.com/mark-bradshaw/mrhorse) by mark-bradshaw 
 
 #### How it was implemented in the API Template
+Policies are implemented using the mrhorse plugin. The plugin is registered in the api_server.js file. The plugin will load all policy javascipt files located in the policies folder. For example: If this policy file located in the policies folder is named isAdmin.js, then the policy would be identified as isAdmin and loaded on startup of the API server. 
+
+```Javascript
+// register plug-ins
+server.register([
+    Inert,
+    Vision,
+    Blipp,
+	{
+	register: require('mrhorse'),
+	options: {
+		   policyDirectory: __dirname + '/policies'
+		} 
+	}, 	
+    ], function (err) {
+
+        server.start(function(){
+            console.log('Server running at:', server.info.uri);
+			
+        });
+    });
+```
+Policies are just a simple javascript file that exports one javascript function.
+
+```Javascript
+var isAdmin = function(request, reply, next) {
+   var role = _do_something_to_check_user_role(request);
+   if (role && role === 'admin') {
+       return next(null, true); // All is well with this request.  Proceed to the next policy or the route handler.
+   } else {
+       return next(null, false); // This policy is not satisfied.  Return a 403 forbidden.
+   }
+};
+
+// This is optional.  It will default to 'onPreHandler' unless you use a different defaultApplyPoint.
+isAdmin.applyPoint = 'onPreHandler';
+
+module.exports = isAdmin;
+```
+The policy function must call the next callback and provide a boolean value indicating whether the request can continue on for further processing in the hapi lifecycle [next(null, true)]. If you don't call the next callback, hapi will never respond to the request. It will timeout.
+
+Policies are applied to the routes.js file, on the individual API endpoints. 
+
+```Javascript
+server.route({
+    method: 'GET',
+    path: '/admin',
+    handler: function(request, reply) {},
+    config: {
+        plugins: {
+            policies: [
+                ['isLoggedIn', 'isAnAdmin'], // Do these two in parallel
+                'onlyInUS' // Then run this policy
+            ]
+        }
+    }
+});
+```
+
+A couple of policies are included in the policies folder: 
+* isAdmin - Can be used to tag certain users as administrators of the API. 
+* isAudit - Used to audit the request and response, stores the results in the local storage database. 
+* isIPBlacklist - Used to restrict access to the API for certain IP addresses
+* isIPWhitelist - Used to allow access to the API for certain IP addresses 
+* isThrottle - Can be used to throttle API endpoint usage 
 
 ### Proxy Filter
 #### Plugins and Tools used 
