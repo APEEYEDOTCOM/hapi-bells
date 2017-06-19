@@ -89,7 +89,7 @@ Key features included into the template include
 * routes.js - This is the hapi server api routes file. In this file you can set up your API paths. 
 * startup.json - This file is used by pm2 to start the project. In this file you can configure the number of instances of the API to spin up, specify log file locations and give the API a friendly name which will display when running
 
-    $ pm2 monit
+      $ pm2 monit
     
 * path_handlers folder - This folder contains the handlers for the API paths. One file is used per group of API paths. 
 * db folder - This folder contains local storage files, used to store whatever is required by the API. 
