@@ -462,12 +462,191 @@ server.register({
 * Standard and secure cryptographic algorithms - [crypto](https://github.com/Gozala/crypto) by Gozala 
 
 #### How it was implemented in the API Template
+The template implements a basic bearer token authentication strategy using the hapi-auth-bearer-token plugin, registered in the api_server.js file. Once the plugin is registered, and the server is running, the authentication strategy is available to routes in order to secure individual endpoints. In this instance, the bearer token is compared to an existing user stored in a local database. Any strategy can be implemented by following the same guidelines.  
+
+
+```Javascript
+
+// setup swagger options
+const swaggerOptions = {
+    info: {
+        version: '1',
+        title: 'MASTER TEMPLATE',
+        description: 'Master API Teplate with cross cutting concerns baked into the template.'
+    },
+    tags: [
+			{
+			'name': 'System',
+			'description': 'Internal Operations',
+			'externalDocs': {
+				'description': 'Find out more',
+				'url': 'http://www.apeeye.com'
+				}
+			}, 
+			{
+			'name': 'User',
+			'description': 'Consumer Operations',
+			'externalDocs': {
+				'description': 'Find out more',
+				'url': 'http://www.apeeye.com'
+				}
+			}, 
+			{
+			'name': 'TestCases',
+			'description': 'Verification',
+			'externalDocs': {
+				'description': 'Find out more',
+				'url': 'http://www.apeeye.com'
+				}
+			}
+		],
+	securityDefinitions: {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header',
+            'x-keyPrefix': 'Bearer '
+        }
+    },
+    security: [{ 'Bearer': [] }]
+};
+
+// register plug-ins
+server.register([
+    Inert,
+    Vision,
+    Blipp,
+	{
+	 register: require('hapi-auth-bearer-token') 
+	},	
+    ], function (err) {
+
+        server.start(function(){
+            console.log('Server running at:', server.info.uri);
+			
+        });
+    });
+
+	// Create a validation function for strategy
+	var validate = function (token, callback) {
+	var fulltoken = 'Bearer ' + token;	
+	console.log('Received Token is: ' + token)
+
+	db = new sqlite3.Database('./db/APEEYEDB.db');	
+	  var params = [fulltoken]; 
+	  var select = 'select * from apeusers where btoken = ?';
+	 
+	  db.all(select,params, function (err, rows) {
+		if(err){
+			console.log('ERROR on db read')
+			console.log(err);
+				console.log('Token Valid');
+				callback(null, true, { token: token })
+		}else{
+			 var reqResponse ;
+			console.log('no error on db read')
+			console.log(rows.length) 
+			console.log(rows) 
+		   if (rows.length <= 0){
+			 reqResponse = {
+			'body' : reqResponse,
+			'details' : 'failure'
+			}	
+			console.log('Token Invalid');
+			callback(null, false)				
+		   } else {
+		 reqResponse = {
+		'body' : {'TokenType': 'Bearer', 'Token': rows[0].btoken, 'IncludeInRequestHeader': 'Authorization: ' + rows[0].btoken},
+		'details' : 'success'
+		}
+		console.log(reqResponse);
+		callback(null, true, { token: token })				
+		   }	
+ 
+		}
+	  });
+	db.close()		
+ 
+	};
+	 server.auth.strategy('simple', 'bearer-access-token', {
+			validateFunc: validate
+		});
+```
+Once the plugin is registered, the routes.js file can be edited to add the authentication strategy to individual endpoints. 
+
+```Javascript
+	{
+	method: 'GET',
+	path: '/System/API_Ping/',
+	config: {
+	auth: {strategies:['simple']},
+	   plugins: {
+			disinfect: {
+				disinfectQuery: true,
+				disinfectParams: true,
+				disinfectPayload: true
+			},
+			'hapi-geo-locate': {
+				enabled: false
+			},
+				policies: ['isAdmin', 'isIPWhitelist', 'isThrottle', 'isIPBlacklist']
+		},
+	handler:  systemEndpoints.API_Ping,
+	description: 'API Heartbeat Monitoring',
+	notes : 'Endpoint used for Heartbeat Monitoring. Monitoring will use this endpoint to check if the API is up and available.',
+	tags: ['api']
+		},
+	}
+```
+For encrypting or decrypting values, there are associated helper functions in the path_handlers/utilities.js file. Encrypting and decrypting values is facilitated by the crypto npm module. 
+
+```Javascript
+ encrypt: function(text){
+  var cipher = crypto.createCipher(algorithm,password)
+  var crypted = cipher.update(text,'utf8','hex')
+  crypted += cipher.final('hex');
+  return crypted;
+},
+
+ decrypt: function(text){
+  var decipher = crypto.createDecipher(algorithm,password)
+  var dec = decipher.update(text,'hex','utf8')
+  dec += decipher.final('utf8');
+  return dec;
+ },		
+```
 
 ### Storage
 #### Plugins and Tools used 
 * Asynchronous, non-blocking SQLite3 bindings for Node.js to store token and user information - [node-sqlite3](https://github.com/mapbox/node-sqlite3) by mapbox 
 
 #### How it was implemented in the API Template
+Within the db folder are two sqlite database instances. One for general information, and one for auditing purposed. 
+Auditing is implemented through the isAudit policy as mentioned above. Should and endpoint request or response require auditing, the isAudit policy needs to be added into the policy configuration of the specified endpoint. 
+
+Using the node-sqlite3 module, the following simple database operations are possible.
+
+```Javascript
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database('./db/APEEYEDB.db');
+
+db.serialize(function() {
+db.run("DROP TABLE tblUsers");
+db.run("CREATE TABLE tblUsers (email TEXT, pass TEXT, btoken TEXT)")
+	  var stmt = db.prepare("INSERT INTO tblUsers VALUES (?, ?, ?)");
+		stmt.run('someone@email.com', 'yoursupersecretpassword', 'Bearer 12314-12314-12314-12314-12314');
+    stmt.finalize();
+ 
+  db.each("SELECT rowid AS id, email, pass, btoken  FROM tblUsers", function(err, row) {
+	  console.log(row)
+      console.log(row.id + ": " + row.email + ' ' + row.pass + ' ' + row.btoken);
+  });
+});
+ 
+db.close();
+
+```
+An optional extra feature you could implement is to encrypt the sqlite database at rest using [sqlcipher](https://github.com/sqlcipher/sqlcipher)
 
 ### CRON
 #### Plugins and Tools used 
