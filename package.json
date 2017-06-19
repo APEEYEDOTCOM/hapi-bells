@@ -1,0 +1,61 @@
+{
+  "name": "hapi-bells",
+  "version": "1.0.0",
+  "description": "A Hapi API template with cross cutting concerns baked into the template",
+  "main": "api_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/APEEYEDOTCOM/hapi-bells.git"
+  },
+  "keywords": [
+    "hapi",
+    "api",
+    "template"
+  ],
+  "author": "APEEYEDOTCOM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/APEEYEDOTCOM/hapi-bells/issues"
+  },
+  "homepage": "https://github.com/APEEYEDOTCOM/hapi-bells#readme",
+  "dependencies": {
+    "archiver": "^1.3.0",
+    "async": "^2.4.1",
+    "autorest": "^0.20.0",
+    "blipp": "^2.3.0",
+    "bluebird": "^3.5.0",
+    "boom": "^4.3.1",
+    "chai": "^4.0.1",
+    "config": "^1.26.1",
+    "cross-sqlcipher": "0.0.2",
+    "crypto": "0.0.3",
+    "disinfect": "^0.2.1",
+    "fs": "0.0.1-security",
+    "hapi": "^16.1.1",
+    "hapi-auth-bearer-token": "^5.1.0",
+    "hapi-auth-jwt2": "^7.2.4",
+    "hapi-cors-headers": "^1.0.0",
+    "hapi-cron": "0.0.3",
+    "hapi-geo-locate": "^2.1.0",
+    "hapi-response-time": "^1.1.2",
+    "hapi-server-session": "^3.0.2",
+    "hapi-status": "^2.1.0",
+    "hapi-swagger": "^7.7.0",
+    "hapijs-status-monitor": "^0.5.0",
+    "inert": "^4.2.0",
+    "joi": "^10.5.0",
+    "jwks-rsa": "^1.1.1",
+    "marked": "^0.3.6",
+    "mrhorse": "^2.2.0",
+    "node-cmd": "^3.0.0",
+    "request": "^2.81.0",
+    "scooter": "^4.0.0",
+    "sqlite3": "^3.1.8",
+    "therealyou": "^1.1.0",
+    "uuid": "^3.0.1",
+    "vision": "^4.1.1"
+  }
+}

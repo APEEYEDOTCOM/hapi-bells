@@ -1,0 +1,11 @@
+ {"CURRENT_ENVIRONMENT" :{
+		"NAME": "DEV"
+  },
+  "CRYPTO" :{
+		"ALGORITHM": "aes-256-ctr",
+		"PASSWORD": "YourMasterPasswordGoesHere"
+  },
+  "THRESHOLD" : {
+	"REQUESTS": 1000
+  }
+}

@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>API</title>
+
+    <link rel="icon" type="image/png" href="{{hapiSwagger.swaggerUIPath}}images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{hapiSwagger.swaggerUIPath}}images/favicon-16x16.png" sizes="16x16" />
+    <link href='{{hapiSwagger.swaggerUIPath}}css/typography.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='{{hapiSwagger.swaggerUIPath}}css/reset.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='{{hapiSwagger.swaggerUIPath}}css/screen.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='{{hapiSwagger.swaggerUIPath}}css/reset.css' media='print' rel='stylesheet' type='text/css' />
+    <link href='{{hapiSwagger.swaggerUIPath}}css/print.css' media='print' rel='stylesheet' type='text/css' />
+    <script src='{{hapiSwagger.swaggerUIPath}}lib/jquery-1.8.0.min.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}lib/jquery.slideto.min.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}lib/jquery.wiggle.min.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}lib/jquery.ba-bbq.min.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}lib/handlebars-2.0.0.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}lib/js-yaml.min.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}lib/lodash.min.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}lib/backbone-min.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}swagger-ui.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}lib/highlight.7.3.pack.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}lib/jsoneditor.min.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}lib/marked.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}lib/swagger-oauth.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}extend.js' type='text/javascript'></script>
+
+
+    <!-- Some basic translations -->
+    <script src='{{hapiSwagger.swaggerUIPath}}lang/translator.js' type='text/javascript'></script>
+    <script src='{{hapiSwagger.swaggerUIPath}}lang/{{hapiSwagger.lang}}.js' type='text/javascript'></script>
+
+<script type="text/javascript">
+
+    // creates a list of tags in the order they where created
+    var tags = []
+    {{#each hapiSwagger.tags}}
+    tags.push('{{name}}');
+    {{/each}}
+
+
+    $(function () {
+
+        //$('#input_apiKey').hide();
+
+        var url = window.location.search.match(/url=([^&]+)/);
+        if (url && url.length > 1) {
+            url = decodeURIComponent(url[1]);
+        } else {
+            url = "{{{hapiSwagger.jsonPath}}}";
+        }
+
+        // Pre load translate...
+        if(window.SwaggerTranslator) {
+            window.SwaggerTranslator.translate();
+        }
+
+        // pull validatorUrl string or null form server
+        var validatorUrl = null;
+        {{#if hapiSwagger.validatorUrl}}
+        validatorUrl: '{{hapiSwagger.validatorUrl}}';
+        {{/if}}
+
+        window.swaggerUi = new SwaggerUi({
+            url: url,
+            dom_id: "swagger-ui-container",
+            supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
+            onComplete: function (swaggerApi, swaggerUi) {
+                if (typeof initOAuth == "function") {
+                    initOAuth({
+                        clientId: "13123123",
+                        clientSecret: "123123123",
+                        realm: "all",
+                        appName: "apeeye",
+                        scopeSeparator: ","
+                    });
+                }
+
+                if (window.SwaggerTranslator) {
+                    window.SwaggerTranslator.translate();
+                }
+
+                $('pre code').each(function (i, e) {
+                    hljs.highlightBlock(e)
+                });
+
+                if (Array.isArray(swaggerApi.auths) && swaggerApi.auths.length > 0 && swaggerApi.auths[0].type === "apiKey") {
+                    auth = swaggerApi.auths[0].value;
+                    $('#input_apiKey').show();
+                }
+                addApiKeyAuthorization();
+            },
+            onFailure: function (data) {
+                log("Unable to Load SwaggerUI");
+            },
+            docExpansion: "{{hapiSwagger.collapsed}}", /*{{hapiSwagger.expanded}}*/
+            apisSorter: apisSorter.{{hapiSwagger.sortTags}},
+            operationsSorter: operationsSorter.{{hapiSwagger.sortEndpoints}},
+            showRequestHeaders: false,
+            validatorUrl: '{{hapiSwagger.validatorUrl}}',
+            jsonEditor: {{#if isTrue}}true{{else}}false{{/if}}
+        });
+
+
+        function addApiKeyAuthorization() {
+            var key = $('#input_apiKey')[0].value;
+            if (key && key.trim() != "") {
+                var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization(auth.name, key, auth.in);
+                window.swaggerUi.api.clientAuthorizations.add(auth.name, apiKeyAuth);
+                log("added key " + key);
+            }
+        }
+
+
+        $('#input_apiKey').change(addApiKeyAuthorization);
+
+        
+        // if you have an apiKey you would like to pre-populate on the page for demonstration purposes...
+
+        var apiKey = "";
+        $('#input_apiKey').val(apiKey);
+
+  
+        window.swaggerUi.load();
+
+        function log() {
+            if ('console' in window) {
+                console.log.apply(console, arguments);
+            }
+        }
+  });
+
+
+
+    </script>
+
+    {{> head}}
+
+    <style>
+        /* for custom page remove swaggers api info section */
+        #api_info{
+            display: none;
+        }
+    </style>
+
+  </head>
+
+    <div class="wrapper">
+        <header>
+			<img src="images/logo.png" alt="APEEYE" height="auto" width="50%" style="margin-top: 10px">
+            {{#if hapiSwagger.info.title}}
+                <h1 class="home-link" style="margin-top:-50px"><a href="/">{{hapiSwagger.info.title}}</a></h1>
+            {{else}}
+                <h1 class="home-link"style="margin-top:-50px"><a href="/">{{{title}}}</a></h1>
+            {{/if}}
+        </header>
+        {{#if hapiSwagger.info.description}}
+            <p>{{hapiSwagger.info.description}}</p>
+        {{/if}}
+		<section class="swagger-section">
+            <h1 class="entry-title api-title">API - Authorization Bearer Token</h1>
+            <input type="text" name="fname" id="input_apiKey" class="input_apiKey"></input>
+        </section>
+
+        <section class="swagger-section">
+            <h1 class="entry-title api-title">API - Definition</h1>
+            <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
+        </section>
+
+        {{#if hapiSwagger.info.license}}
+            <section id="license">
+                License:
+                {{#if hapiSwagger.info.licenseUrl}}<a href="{{hapiSwagger.info.licenseUrl}}">{{/if}}
+                    {{hapiSwagger.info.license}}
+                {{#if hapiSwagger.info.licenseUrl}}</a>{{/if}}
+             </section>
+        {{/if}}
+
+        <section id="readme">
+            <h1 class="entry-title">API - Utilities and Documentation</h1>
+            {{{markdown}}}
+        </section>
+			<h2><a href="http://localhost:8082/status" target="_blank">API Monitor</a></h2>
+			<h2><a href="http://localhost:8082/swagger.json" target="_blank">SWAGGER API Definition</a></h2>
+			<h2><a href="docs/index.html" target="_blank">API and SDK Documentation</a></h2>
+		<section id="readme">
+            <h1 class="entry-title">API - Software Development Kits</h1>
+            {{{markdown}}}
+        </section>
+		<table style="width:100%">
+		  <tr>
+			<td><a href="sdks/csharp.zip"><img src="images/csharpt.png" alt="C Sharp" style="width:100%;height:auto;cursor: pointer; cursor: hand; "></a></td>
+			<td><a href="sdks/go.zip"><img src="images/golangt.png" alt="Go Lang" style="width:100%;height:auto;cursor: pointer; cursor: hand; "></a></td>
+			<td><a href="sdks/java.zip"><img src="images/javat.png" alt="Java" style="width:100%;height:auto;cursor: pointer; cursor: hand; "></a></td>
+			<td><a href="sdks/nodejs.zip"><img src="images/nodejst.png" alt="Node JS" style="width:100%;height:auto;cursor: pointer; cursor: hand; "></a></td>
+			<td><a href="sdks/python.zip"><img src="images/pythont.png" alt="Python" style="width:100%;height:auto;cursor: pointer; cursor: hand; "></a></td>
+			<td><a href="sdks/ruby.zip"><img src="images/rubyt.png" alt="Ruby" style="width:100%;height:auto;cursor: pointer; cursor: hand; "></a></td>
+		  </tr>
+		</table>
+		
+     </div>
+
+  </body>
+</html>

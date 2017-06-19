@@ -1,0 +1,604 @@
+2017-06-19 12:22: WARNING: NODE_APP_INSTANCE value of '1' did not match any instance config file names.
+2017-06-19 12:22: WARNING: NODE_APP_INSTANCE value of '0' did not match any instance config file names.
+2017-06-19 12:22: WARNING: See https://github.com/lorenwest/node-config/wiki/Strict-Mode
+2017-06-19 12:22: WARNING: See https://github.com/lorenwest/node-config/wiki/Strict-Mode
+2017-06-19 12:22: http://localhost:8082
+  GET              /                              
+  GET              /{path*}                       
+  GET              /documentation                 
+  GET              /status                        
+  GET              /swagger.json                  
+  GET              /swaggerui/{path*}             
+  GET              /swaggerui/extend.js           
+  GET              /System/API_Ping/              API Heartbeat Monitoring
+  GET              /System/APIRestart/            API Heartbeat Monitoring
+  GET              /System/GenerateSDK/{swaggerJSONurl}/{language}/{namespace} Generate API SDK
+  GET              /System/Session/               API Session Information
+  GET              /System/UserAgent/             Consumer User Agent Information
+  POST             /User/RefreshTokenForUserAccount/ Step 3. Create new user account bearer token.
+  POST             /User/RegisterAccountToReceiveToken/ Step 1. Create a user account.
+  POST             /User/RequestAuditTrail/       Step 4. Return Audit Trail.
+  POST             /User/RetrieveTokenForUserAccount/ Step 2. Retrieve user account bearer token.
+
+2017-06-19 12:22: http://localhost:8082
+  GET              /                              
+  GET              /{path*}                       
+  GET              /documentation                 
+  GET              /status                        
+  GET              /swagger.json                  
+  GET              /swaggerui/{path*}             
+  GET              /swaggerui/extend.js           
+  GET              /System/API_Ping/              API Heartbeat Monitoring
+  GET              /System/APIRestart/            API Heartbeat Monitoring
+  GET              /System/GenerateSDK/{swaggerJSONurl}/{language}/{namespace} Generate API SDK
+  GET              /System/Session/               API Session Information
+  GET              /System/UserAgent/             Consumer User Agent Information
+  POST             /User/RefreshTokenForUserAccount/ Step 3. Create new user account bearer token.
+  POST             /User/RegisterAccountToReceiveToken/ Step 1. Create a user account.
+  POST             /User/RequestAuditTrail/       Step 4. Return Audit Trail.
+  POST             /User/RetrieveTokenForUserAccount/ Step 2. Retrieve user account bearer token.
+
+2017-06-19 12:22: Server running at: http://localhost:8082
+2017-06-19 12:22: Server running at: http://localhost:8082
+2017-06-19 12:22: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:22: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:22: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:22: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:22: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:24: WARNING: NODE_APP_INSTANCE value of '0' did not match any instance config file names.
+2017-06-19 12:24: WARNING: NODE_APP_INSTANCE value of '1' did not match any instance config file names.
+2017-06-19 12:24: WARNING: See https://github.com/lorenwest/node-config/wiki/Strict-Mode
+2017-06-19 12:24: http://localhost:8082
+  GET              /                              
+  GET              /{path*}                       
+  GET              /documentation                 
+  GET              /status                        
+  GET              /swagger.json                  
+  GET              /swaggerui/{path*}             
+  GET              /swaggerui/extend.js           
+  GET              /System/API_Ping/              API Heartbeat Monitoring
+  GET              /System/APIRestart/            API Heartbeat Monitoring
+  GET              /System/GenerateSDK/{swaggerJSONurl}/{language}/{namespace} Generate API SDK
+  GET              /System/Session/               API Session Information
+  GET              /System/UserAgent/             Consumer User Agent Information
+  POST             /User/RefreshTokenForUserAccount/ Step 3. Create new user account bearer token.
+  POST             /User/RegisterAccountToReceiveToken/ Step 1. Create a user account.
+  POST             /User/RequestAuditTrail/       Step 4. Return Audit Trail.
+  POST             /User/RetrieveTokenForUserAccount/ Step 2. Retrieve user account bearer token.
+
+2017-06-19 12:24: Server running at: http://localhost:8082
+2017-06-19 12:24: WARNING: See https://github.com/lorenwest/node-config/wiki/Strict-Mode
+2017-06-19 12:24: http://localhost:8082
+  GET              /                              
+  GET              /{path*}                       
+  GET              /documentation                 
+  GET              /status                        
+  GET              /swagger.json                  
+  GET              /swaggerui/{path*}             
+  GET              /swaggerui/extend.js           
+  GET              /System/API_Ping/              API Heartbeat Monitoring
+  GET              /System/APIRestart/            API Heartbeat Monitoring
+  GET              /System/GenerateSDK/{swaggerJSONurl}/{language}/{namespace} Generate API SDK
+  GET              /System/Session/               API Session Information
+  GET              /System/UserAgent/             Consumer User Agent Information
+  POST             /User/RefreshTokenForUserAccount/ Step 3. Create new user account bearer token.
+  POST             /User/RegisterAccountToReceiveToken/ Step 1. Create a user account.
+  POST             /User/RequestAuditTrail/       Step 4. Return Audit Trail.
+  POST             /User/RetrieveTokenForUserAccount/ Step 2. Retrieve user account bearer token.
+
+2017-06-19 12:24: Server running at: http://localhost:8082
+2017-06-19 12:24: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:24: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:24: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:24: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:24: no error on db read
+2017-06-19 12:24: 1
+2017-06-19 12:24: [ { btoken: 'Bearer 5d612670d2db73275fba12b10522c5d532425f5b8263921c84ae3ddc0344527bcd6e76a9dfa2565975768fe434136fbe7b77b51a1d' } ]
+2017-06-19 12:24: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:24: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:24: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:24: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:24: Geo Location disabled for this route
+2017-06-19 12:24: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:24: testcron has run!
+2017-06-19 12:24: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:24: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:24: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:24: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:24: Geo Location disabled for this route
+2017-06-19 12:25: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:25: testcron has run!
+2017-06-19 12:25: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:25: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:25: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:25: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:25: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:25: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:25: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:25: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:25: WARNING: NODE_APP_INSTANCE value of '0' did not match any instance config file names.
+2017-06-19 12:25: WARNING: NODE_APP_INSTANCE value of '0' did not match any instance config file names.
+2017-06-19 12:25: WARNING: See https://github.com/lorenwest/node-config/wiki/Strict-Mode
+2017-06-19 12:25: http://localhost:8082
+  GET              /                              
+  GET              /{path*}                       
+  GET              /documentation                 
+  GET              /status                        
+  GET              /swagger.json                  
+  GET              /swaggerui/{path*}             
+  GET              /swaggerui/extend.js           
+  GET              /System/API_Ping/              API Heartbeat Monitoring
+  GET              /System/APIRestart/            API Heartbeat Monitoring
+  GET              /System/GenerateSDK/{swaggerJSONurl}/{language}/{namespace} Generate API SDK
+  GET              /System/Session/               API Session Information
+  GET              /System/UserAgent/             Consumer User Agent Information
+  POST             /User/RefreshTokenForUserAccount/ Step 3. Create new user account bearer token.
+  POST             /User/RegisterAccountToReceiveToken/ Step 1. Create a user account.
+  POST             /User/RequestAuditTrail/       Step 4. Return Audit Trail.
+  POST             /User/RetrieveTokenForUserAccount/ Step 2. Retrieve user account bearer token.
+
+2017-06-19 12:25: WARNING: See https://github.com/lorenwest/node-config/wiki/Strict-Mode
+2017-06-19 12:25: Server running at: http://localhost:8082
+2017-06-19 12:25: http://localhost:8082
+  GET              /                              
+  GET              /{path*}                       
+  GET              /documentation                 
+  GET              /status                        
+  GET              /swagger.json                  
+  GET              /swaggerui/{path*}             
+  GET              /swaggerui/extend.js           
+  GET              /System/API_Ping/              API Heartbeat Monitoring
+  GET              /System/APIRestart/            API Heartbeat Monitoring
+  GET              /System/GenerateSDK/{swaggerJSONurl}/{language}/{namespace} Generate API SDK
+  GET              /System/Session/               API Session Information
+  GET              /System/UserAgent/             Consumer User Agent Information
+  POST             /User/RefreshTokenForUserAccount/ Step 3. Create new user account bearer token.
+  POST             /User/RegisterAccountToReceiveToken/ Step 1. Create a user account.
+  POST             /User/RequestAuditTrail/       Step 4. Return Audit Trail.
+  POST             /User/RetrieveTokenForUserAccount/ Step 2. Retrieve user account bearer token.
+
+2017-06-19 12:25: Server running at: http://localhost:8082
+2017-06-19 12:25: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:25: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:25: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:25: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:25: WARNING: NODE_APP_INSTANCE value of '0' did not match any instance config file names.
+2017-06-19 12:25: WARNING: NODE_APP_INSTANCE value of '0' did not match any instance config file names.
+2017-06-19 12:25: WARNING: See https://github.com/lorenwest/node-config/wiki/Strict-Mode
+2017-06-19 12:25: http://localhost:8082
+  GET              /                              
+  GET              /{path*}                       
+  GET              /documentation                 
+  GET              /status                        
+  GET              /swagger.json                  
+  GET              /swaggerui/{path*}             
+  GET              /swaggerui/extend.js           
+  GET              /System/API_Ping/              API Heartbeat Monitoring
+  GET              /System/APIRestart/            API Heartbeat Monitoring
+  GET              /System/GenerateSDK/{swaggerJSONurl}/{language}/{namespace} Generate API SDK
+  GET              /System/Session/               API Session Information
+  GET              /System/UserAgent/             Consumer User Agent Information
+  POST             /User/RefreshTokenForUserAccount/ Step 3. Create new user account bearer token.
+  POST             /User/RegisterAccountToReceiveToken/ Step 1. Create a user account.
+  POST             /User/RequestAuditTrail/       Step 4. Return Audit Trail.
+  POST             /User/RetrieveTokenForUserAccount/ Step 2. Retrieve user account bearer token.
+
+2017-06-19 12:25: WARNING: See https://github.com/lorenwest/node-config/wiki/Strict-Mode
+2017-06-19 12:25: http://localhost:8082
+  GET              /                              
+  GET              /{path*}                       
+  GET              /documentation                 
+  GET              /status                        
+  GET              /swagger.json                  
+  GET              /swaggerui/{path*}             
+  GET              /swaggerui/extend.js           
+  GET              /System/API_Ping/              API Heartbeat Monitoring
+  GET              /System/APIRestart/            API Heartbeat Monitoring
+  GET              /System/GenerateSDK/{swaggerJSONurl}/{language}/{namespace} Generate API SDK
+  GET              /System/Session/               API Session Information
+  GET              /System/UserAgent/             Consumer User Agent Information
+  POST             /User/RefreshTokenForUserAccount/ Step 3. Create new user account bearer token.
+  POST             /User/RegisterAccountToReceiveToken/ Step 1. Create a user account.
+  POST             /User/RequestAuditTrail/       Step 4. Return Audit Trail.
+  POST             /User/RetrieveTokenForUserAccount/ Step 2. Retrieve user account bearer token.
+
+2017-06-19 12:25: Server running at: http://localhost:8082
+2017-06-19 12:25: Server running at: http://localhost:8082
+2017-06-19 12:25: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:25: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:25: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:25: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:25: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:25: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:25: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:25: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:25: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:25: Geo Location disabled for this route
+2017-06-19 12:25: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:25: testcron has run!
+2017-06-19 12:25: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:25: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:25: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:25: Geo Location disabled for this route
+2017-06-19 12:25: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:25: testcron has run!
+2017-06-19 12:26: WARNING: NODE_APP_INSTANCE value of '0' did not match any instance config file names.
+2017-06-19 12:26: WARNING: NODE_APP_INSTANCE value of '0' did not match any instance config file names.
+2017-06-19 12:26: WARNING: See https://github.com/lorenwest/node-config/wiki/Strict-Mode
+2017-06-19 12:26: WARNING: See https://github.com/lorenwest/node-config/wiki/Strict-Mode
+2017-06-19 12:26: http://localhost:8082
+  GET              /                              
+  GET              /{path*}                       
+  GET              /documentation                 
+  GET              /status                        
+  GET              /swagger.json                  
+  GET              /swaggerui/{path*}             
+  GET              /swaggerui/extend.js           
+  GET              /System/API_Ping/              API Heartbeat Monitoring
+  GET              /System/APIRestart/            API Heartbeat Monitoring
+  GET              /System/GenerateSDK/{swaggerJSONurl}/{language}/{namespace} Generate API SDK
+  GET              /System/Session/               API Session Information
+  GET              /System/UserAgent/             Consumer User Agent Information
+  POST             /User/RefreshTokenForUserAccount/ Step 3. Create new user account bearer token.
+  POST             /User/RegisterAccountToReceiveToken/ Step 1. Create a user account.
+  POST             /User/RequestAuditTrail/       Step 4. Return Audit Trail.
+  POST             /User/RetrieveTokenForUserAccount/ Step 2. Retrieve user account bearer token.
+
+2017-06-19 12:26: http://localhost:8082
+  GET              /                              
+  GET              /{path*}                       
+  GET              /documentation                 
+  GET              /status                        
+  GET              /swagger.json                  
+  GET              /swaggerui/{path*}             
+  GET              /swaggerui/extend.js           
+  GET              /System/API_Ping/              API Heartbeat Monitoring
+  GET              /System/APIRestart/            API Heartbeat Monitoring
+  GET              /System/GenerateSDK/{swaggerJSONurl}/{language}/{namespace} Generate API SDK
+  GET              /System/Session/               API Session Information
+  GET              /System/UserAgent/             Consumer User Agent Information
+  POST             /User/RefreshTokenForUserAccount/ Step 3. Create new user account bearer token.
+  POST             /User/RegisterAccountToReceiveToken/ Step 1. Create a user account.
+  POST             /User/RequestAuditTrail/       Step 4. Return Audit Trail.
+  POST             /User/RetrieveTokenForUserAccount/ Step 2. Retrieve user account bearer token.
+
+2017-06-19 12:26: Server running at: http://localhost:8082
+2017-06-19 12:26: Server running at: http://localhost:8082
+2017-06-19 12:26: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:26: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:26: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:26: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:26: WARNING: NODE_APP_INSTANCE value of '0' did not match any instance config file names.
+2017-06-19 12:26: WARNING: NODE_APP_INSTANCE value of '0' did not match any instance config file names.
+2017-06-19 12:26: WARNING: See https://github.com/lorenwest/node-config/wiki/Strict-Mode
+2017-06-19 12:26: http://localhost:8082
+  GET              /                              
+  GET              /{path*}                       
+  GET              /documentation                 
+  GET              /status                        
+  GET              /swagger.json                  
+  GET              /swaggerui/{path*}             
+  GET              /swaggerui/extend.js           
+  GET              /System/API_Ping/              API Heartbeat Monitoring
+  GET              /System/API_Restart/           API Restart
+  GET              /System/GenerateSDK/{swaggerJSONurl}/{language}/{namespace} Generate API SDK
+  GET              /System/Session/               API Session Information
+  GET              /System/UserAgent/             Consumer User Agent Information
+  POST             /User/RefreshTokenForUserAccount/ Step 3. Create new user account bearer token.
+  POST             /User/RegisterAccountToReceiveToken/ Step 1. Create a user account.
+  POST             /User/RequestAuditTrail/       Step 4. Return Audit Trail.
+  POST             /User/RetrieveTokenForUserAccount/ Step 2. Retrieve user account bearer token.
+
+2017-06-19 12:26: Server running at: http://localhost:8082
+2017-06-19 12:26: WARNING: See https://github.com/lorenwest/node-config/wiki/Strict-Mode
+2017-06-19 12:26: http://localhost:8082
+  GET              /                              
+  GET              /{path*}                       
+  GET              /documentation                 
+  GET              /status                        
+  GET              /swagger.json                  
+  GET              /swaggerui/{path*}             
+  GET              /swaggerui/extend.js           
+  GET              /System/API_Ping/              API Heartbeat Monitoring
+  GET              /System/API_Restart/           API Restart
+  GET              /System/GenerateSDK/{swaggerJSONurl}/{language}/{namespace} Generate API SDK
+  GET              /System/Session/               API Session Information
+  GET              /System/UserAgent/             Consumer User Agent Information
+  POST             /User/RefreshTokenForUserAccount/ Step 3. Create new user account bearer token.
+  POST             /User/RegisterAccountToReceiveToken/ Step 1. Create a user account.
+  POST             /User/RequestAuditTrail/       Step 4. Return Audit Trail.
+  POST             /User/RetrieveTokenForUserAccount/ Step 2. Retrieve user account bearer token.
+
+2017-06-19 12:26: Server running at: http://localhost:8082
+2017-06-19 12:26: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:26: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:26: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:26: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:26: Geo Location disabled for this route
+2017-06-19 12:26: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:26: testcron has run!
+2017-06-19 12:26: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:26: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:26: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:26: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:26: Geo Location disabled for this route
+2017-06-19 12:26: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:26: testcron has run!
+2017-06-19 12:27: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:27: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:27: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:27: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:27: Geo Location disabled for this route
+2017-06-19 12:27: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:27: testcron has run!
+2017-06-19 12:27: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:27: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:27: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:27: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:27: Geo Location disabled for this route
+2017-06-19 12:27: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:27: testcron has run!
+2017-06-19 12:28: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:28: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:28: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:28: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:28: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:28: Geo Location disabled for this route
+2017-06-19 12:28: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:28: testcron has run!
+2017-06-19 12:28: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:28: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:28: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:28: Geo Location disabled for this route
+2017-06-19 12:28: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:28: testcron has run!
+2017-06-19 12:29: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:29: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:29: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:29: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:29: Geo Location disabled for this route
+2017-06-19 12:29: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:29: testcron has run!
+2017-06-19 12:29: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:29: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:29: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:29: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:29: Geo Location disabled for this route
+2017-06-19 12:29: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:29: testcron has run!
+2017-06-19 12:30: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:30: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:30: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:30: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:30: Geo Location disabled for this route
+2017-06-19 12:30: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:30: testcron has run!
+2017-06-19 12:30: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:30: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:30: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:30: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:30: Geo Location disabled for this route
+2017-06-19 12:30: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:30: testcron has run!
+2017-06-19 12:31: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:31: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:31: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:31: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:31: Geo Location disabled for this route
+2017-06-19 12:31: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:31: testcron has run!
+2017-06-19 12:31: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:31: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:31: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:31: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:31: Geo Location disabled for this route
+2017-06-19 12:31: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:31: testcron has run!
+2017-06-19 12:32: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:32: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:32: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:32: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:32: Geo Location disabled for this route
+2017-06-19 12:32: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:32: testcron has run!
+2017-06-19 12:32: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:32: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:32: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:32: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:32: Geo Location disabled for this route
+2017-06-19 12:32: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:32: testcron has run!
+2017-06-19 12:33: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:33: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:33: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:33: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:33: Geo Location disabled for this route
+2017-06-19 12:33: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:33: testcron has run!
+2017-06-19 12:33: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:33: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:33: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:33: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:33: Geo Location disabled for this route
+2017-06-19 12:33: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:33: testcron has run!
+2017-06-19 12:34: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:34: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:34: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:34: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:34: Geo Location disabled for this route
+2017-06-19 12:34: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:34: testcron has run!
+2017-06-19 12:34: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:34: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:34: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:34: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:34: Geo Location disabled for this route
+2017-06-19 12:34: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:34: testcron has run!
+2017-06-19 12:35: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:35: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:35: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:35: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:35: Geo Location disabled for this route
+2017-06-19 12:35: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:35: testcron has run!
+2017-06-19 12:35: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:35: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:35: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:35: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:35: Geo Location disabled for this route
+2017-06-19 12:35: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:35: testcron has run!
+2017-06-19 12:36: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:36: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:36: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:36: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:36: Geo Location disabled for this route
+2017-06-19 12:36: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:36: testcron has run!
+2017-06-19 12:36: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:36: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:36: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:36: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:36: Geo Location disabled for this route
+2017-06-19 12:36: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:36: testcron has run!
+2017-06-19 12:37: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:37: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:37: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:37: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:37: Geo Location disabled for this route
+2017-06-19 12:37: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:37: testcron has run!
+2017-06-19 12:37: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:37: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:37: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:37: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:37: Geo Location disabled for this route
+2017-06-19 12:38: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:38: testcron has run!
+2017-06-19 12:38: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:38: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:38: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:38: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:38: Geo Location disabled for this route
+2017-06-19 12:38: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:38: testcron has run!
+2017-06-19 12:38: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:38: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:38: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:38: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:38: Geo Location disabled for this route
+2017-06-19 12:38: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:38: testcron has run!
+2017-06-19 12:39: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:39: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:39: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:39: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:39: Geo Location disabled for this route
+2017-06-19 12:39: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:39: testcron has run!
+2017-06-19 12:39: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:39: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:39: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:39: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:39: Geo Location disabled for this route
+2017-06-19 12:40: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:40: testcron has run!
+2017-06-19 12:40: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:40: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:40: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:40: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:40: Geo Location disabled for this route
+2017-06-19 12:40: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:40: testcron has run!
+2017-06-19 12:40: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:40: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:40: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:40: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:40: Geo Location disabled for this route
+2017-06-19 12:40: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:40: testcron has run!
+2017-06-19 12:41: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:41: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:41: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:41: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:41: Geo Location disabled for this route
+2017-06-19 12:41: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:41: testcron has run!
+2017-06-19 12:41: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:41: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:41: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:41: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:41: Geo Location disabled for this route
+2017-06-19 12:42: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:42: testcron has run!
+2017-06-19 12:42: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:42: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:42: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:42: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:42: Geo Location disabled for this route
+2017-06-19 12:42: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:42: testcron has run!
+2017-06-19 12:42: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:42: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:42: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:42: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:42: Geo Location disabled for this route
+2017-06-19 12:42: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:42: testcron has run!
+2017-06-19 12:43: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:43: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:43: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:43: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:43: Geo Location disabled for this route
+2017-06-19 12:43: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:43: testcron has run!
+2017-06-19 12:43: POLICY: True on isAdmin Policy for role: admin
+2017-06-19 12:43: POLICY: True on isIPWhitelist Policy for IP: 127.0.0.1
+2017-06-19 12:43: POLICY: True on isThrottle Policy. Number of requests: 1
+2017-06-19 12:43: POLICY: True on isIPBlacklist Policy for IP: 127.0.0.1
+2017-06-19 12:43: Geo Location disabled for this route
+2017-06-19 12:43: { statusCode: 200,
+  result: { body: 'pong', details: 'success' } }
+2017-06-19 12:43: testcron has run!
