@@ -100,8 +100,12 @@ Key features included into the template include
 
 ## Template Features and Examples
 ### Documentation
+#### Plugins and Tools used 
 * Interactive documentation compliant with the Open API Standard (OAS) - [hapi-swagger](https://github.com/glennjones/hapi-swagger/) by Glen Jones
 * Static Client Side SDK Documenttation - [swagger online editor using HTML2 Client](http://editor.swagger.io/#/) by Swagger
+
+#### How it was implemented in the API Template
+lorem epson bala
 
 ### Request and Response Sanitization
 * Object schema validation - [joi](https://github.com/hapijs/joi) by hapijs 
