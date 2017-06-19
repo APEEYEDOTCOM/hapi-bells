@@ -14,6 +14,7 @@ A Hapi API template with cross cutting concerns baked into the template
 * [Introduction](#introduction)
    * [Purpose](#purpose)
    * [What is included in the template?](#what-is-included-in-the-template)
+* [Usage](#usage)
 * [License](#license)
 
 ## Introduction
@@ -27,6 +28,7 @@ Disclaimer: This template was created by novice developers. We are not claiming 
 ### What is included in the template? 
 #### Documentation
 * Interactive documentation compliant with the Open API Standard (OAS) - [hapi-swagger](https://github.com/glennjones/hapi-swagger/) by Glen Jones
+* Static Client Side SDK Documenttation - [swagger online editor](http://editor.swagger.io/#/) by Swagger
 
 #### Request and Response Sanitization
 * Object schema validation - [joi](https://github.com/hapijs/joi) by hapijs 
@@ -74,7 +76,12 @@ Disclaimer: This template was created by novice developers. We are not claiming 
 #### SDK Generation
 * SDK Generation through Swagger (OpenAPI) Specification code generator featuring C# and Razor templates. Supports C#, Java, Node.js, TypeScript, Python and Ruby - [autorest](https://github.com/Azure/autorest) by Azure 
 
+## Usage
 
+With [npm](https://npmjs.org/) installed, run
+
+    $ npm install hapi-bells
+    
 
 
 
