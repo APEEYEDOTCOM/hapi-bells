@@ -13,12 +13,13 @@ A Hapi API template with cross cutting concerns baked into the template
 
 * [Introduction](#introduction)
    * [Purpose](#purpose)
+   * [Usage](#usage)
    * [What is included in the template?](#what-is-included-in-the-template)
-* [Usage](#usage)
-* [Template Usage and Examples](#template-usage-and-examples)
+* [Template Features and Examples](#template-features-and-examples)
    * [Documentation](#documentation)
    * [Request and Response Sanitization](#request-and-response-sanitization)
    * [CORS Support](#cors-support)
+   * [Performance Measurements](#performance-measurements)
    * [Policies](#policies)
    * [Proxy Filter](#proxy-filter)
    * [Monitoring](#monitoring)
@@ -28,6 +29,8 @@ A Hapi API template with cross cutting concerns baked into the template
    * [Configuration](#configuration)
    * [Utilities](#utilities)
    * [SDK Generation](#sdk-generation)
+   * [Logging](#logging)
+   * [Load Balancing](#load-balancing)
 * [License](#license)
 
 ## Introduction
@@ -38,7 +41,50 @@ We here at APEEYE have been playing around with the hapi.js framework (https://h
 
 Disclaimer: This template was created by novice developers. We are not claiming this is the absolute best template setup there possibly could be, so feel free to constructively critique it and make suggestions on how to improve it. 
 
+## Usage
+
+### Dependancies
+* [node.js](https://nodejs.org/en/) >= v6.10.3
+* [npm](https://docs.npmjs.com/getting-started/installing-node) >= v3.10.5
+* [pm2](https://github.com/Unitech/pm2) >= v2.4.0 
+* [autorest](https://github.com/Azure/autorest) >= v1.1.0
+
+### Installing
+With [npm](https://npmjs.org/) installed, run
+
+    $ npm install hapi-bells
+    
+Then, with [pm2](https://github.com/Unitech/pm2) installed, run
+
+    $ pm2 start startup.json
+
+To access the API Documentation, go to
+
+    $ http://localhost:8082
+
+
 ### What is included in the template? 
+Key features included into the template include
+
+* Interactive Documentation
+* Request and Response Sanitization
+* CORS Support
+* Performance Measurement
+* Policies
+* Proxy Filter
+* Monitoring
+* Security 
+* Data Encryption
+* Local Storage
+* CRON Jobs
+* API Configuration
+* Genral Utilities
+* SDK Generation 
+* Logging
+* Load Balancing
+
+
+### Template Features and Examples
 #### Documentation
 * Interactive documentation compliant with the Open API Standard (OAS) - [hapi-swagger](https://github.com/glennjones/hapi-swagger/) by Glen Jones
 * Static Client Side SDK Documenttation - [swagger online editor using HTML2 Client](http://editor.swagger.io/#/) by Swagger
@@ -89,27 +135,11 @@ Disclaimer: This template was created by novice developers. We are not claiming 
 #### SDK Generation
 * SDK Generation through Swagger (OpenAPI) Specification code generator featuring C# and Razor templates. Supports C#, Java, Node.js, TypeScript, Python and Ruby - [autorest](https://github.com/Azure/autorest) by Azure 
 
-## Usage
+#### Logging
+* Logging capabilities provided by [pm2](https://github.com/Unitech/pm2) by keymetrics 
 
-### Dependancies
-* [node.js](https://nodejs.org/en/) >= v6.10.3
-* [npm](https://docs.npmjs.com/getting-started/installing-node) >= v3.10.5
-* [pm2](https://github.com/Unitech/pm2) >= v2.4.0 
-* [autorest](https://github.com/Azure/autorest) >= v1.1.0
-
-### Installing
-With [npm](https://npmjs.org/) installed, run
-
-    $ npm install hapi-bells
-    
-Then, with [pm2](https://github.com/Unitech/pm2) installed, run
-
-    $ pm2 start startup.json
-
-To access the API Documentation, go to
-
-    $ http://localhost:8082
-
+#### Load Balancing
+* Load Balancing capabilities provided by [pm2](https://github.com/Unitech/pm2) by keymetrics 
 
 
 
