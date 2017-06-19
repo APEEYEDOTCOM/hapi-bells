@@ -1,0 +1,261 @@
+﻿/* $REGISTER */
+#register-wraper {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  margin-top: 25px;
+  margin-bottom: 70px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: #525659;
+  text-align: center;
+}
+
+div#cont{
+    
+    height:700px;
+    width:550px;
+}
+
+object{
+    
+    object-fit: contain;
+}
+
+#register-form {
+  margin: 0 auto;
+  width: 100%;
+}
+#register-form .control-inline {
+  display: inline-block;
+}
+#register-form legend {
+  margin-bottom: 15px;
+  border-bottom: none;
+}
+#register-form input.input-huge {
+  width: 318px;
+}
+#register-form .control-group {
+  margin-bottom: 0;
+}
+#register-form .checkbox.inline {
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 98%;
+}
+#register-form .checkbox.inline input {
+  margin-right: 10px;
+}
+#register-form .body {
+  overflow-y: auto;
+  height: auto;
+}
+#register-form .btn {
+  padding: 10px 40px;
+  background-image: none;
+  box-shadow: none;
+}
+
+.register-info-wraper {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#register-info {
+  position: relative;
+  margin-top:15px;
+  padding: 0px;
+ 
+}
+#register-info ul {
+  margin-right: 10px;
+}
+#register-info ul li {
+  margin-bottom: 5px;
+}
+
+
+/* login form */
+.login-form legend {
+  font-family: "Open Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #333333;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* register form */
+#register-form legend {
+  font-family: "Open Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #333333;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+#register-form label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #333333;
+  font-weight: 300;
+}
+
+/* register info */
+#register-info h1 {
+  font-size: 42px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 55px;
+  font-weight: 700;
+  text-align: right;
+  padding-bottom: 50px;
+  color: white;
+}
+
+
+#register-info h2 {
+	font-family: "Open Sans", sans-serif;
+	font-size:15px;
+	margin-left: 5px;
+	color:#fff;
+	font-weight: 300;
+}
+#register-info pass {
+	font-family: "Open Sans", sans-serif;
+	color:#bcc874;
+	font-weight: 300;
+	font-size:12px;
+}
+#register-info fail {
+	font-family: "Open Sans", sans-serif;
+	color:#d96965;
+	font-weight: 300;
+	font-size:12px;
+}
+
+#register-info ttext {
+	font-family: "Open Sans", sans-serif;
+	color:#bdbdbd;
+	font-weight: 300;
+	font-size:15px;
+}
+
+#register-info h3 {
+	font-size: 22px;
+	color:#9cc3b7
+}
+
+#register-info ul {
+  text-align: left;
+  color: white;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+#register-info hr {
+  	border: 0;
+  	border-top: 1px solid silver;
+	margin-top:3px;
+}
+
+.cont2 {
+	text-align:center;
+	
+}
+
+.cont3 {
+	text-align:left;
+	margin-left:8px;
+	color:#ffffff;
+}
+.cont4 {
+	text-align:left;
+	margin-left:8px;
+	color:#ffffff;
+	width: 55px;
+}
+
+.cont3 ok {
+	color:#bdbdbd;
+}
+
+.cont3 sil {
+	color:#f0ad4e;
+}
+
+.cont3 match {
+	color:#5cb85c;
+}
+
+.info-user2 {
+	text-align:center;
+	font-size: 15px;
+	color: #49B3C1;
+	padding-bottom:58px;
+	}
+
+.fs1 {
+	padding:5px 5px 5px 5px;
+	position:relative;
+}
+
+.fs1:hover {
+	position:relative;
+	color: #fff;
+	cursor:pointer
+}
+
+
+
+
+/* LOGIN PAGE CONFIGURATION  */
+
+
+
+
+
+@media (max-width: 980px) {
+
+  #login-wraper {
+    position: relative;
+    top: 0;
+    margin-top: 25px;
+  }
+}
+@media (max-width: 495px) {
+  #login-wraper {
+    width: auto;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    left: 0;
+  }
+
+  #register-form {
+    width: auto;
+  }
+  #register-form .control-inline {
+    display: block;
+  }
+  #register-form input {
+    display: block;
+    margin: 0 auto;
+  }
+  #register-form input.input-huge, #register-form input.input-medium {
+    width: auto;
+    display: block;
+  }
+  #register-form .btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 979px) {
+  body {
+   
+  }
+}
+
