@@ -292,7 +292,6 @@ CORS support has been implemented in the api_server.js file to enables CORS on a
 const corsHeaders = require('hapi-cors-headers');
 
 ...
-
  
 //Adds cors support
 server.ext('onPreResponse', corsHeaders);
@@ -445,6 +444,17 @@ server.register([
 * Realtime Monitoring solution for hapi - [hapijs-status-monitor](https://github.com/ziyasal/hapijs-status-monitor) by ziyasal
 
 #### How it was implemented in the API Template
+This plugin is a simple, self-hosted module based on Socket.IO and Chart.js to report realtime server metrics for hapi.js servers.
+
+**Register plugin**
+
+```Javascript
+server.register({
+  register: require('hapijs-status-monitor')
+});
+```
+**Run server and go to** `/status`
+
 
 ### Security and Data Encryption
 #### Plugins and Tools used 
