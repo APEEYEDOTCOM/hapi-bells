@@ -403,6 +403,42 @@ A couple of policies are included in the policies folder:
 * Plugin for setting the request.info.remoteAddress and request.info.remotePort based on the X-Forwarded-For and X-Forwarded-Port headers - [therealyou](https://github.com/briandela/therealyou) by briandela 
 
 #### How it was implemented in the API Template
+This plugin is used for setting the `request.info.remoteAddress` and `request.info.remotePort` based on the X-Forwarded-For and X-Forwarded-Port headers.
+The general format of the `x-forwarded-for` header is:
+
+```
+X-Forwarded-For: client, proxy1, proxy2
+```
+
+This plugin sets `request.info.remoteAddress` to the first value of the `x-forwarded-for` header if it is set.
+
+For example, if the header was
+
+```
+'x-forwarded-for': '192.16.184.5, 192.16.184.6, 192.16.184.2'
+```
+
+then `remote.info.remoteAddress` would be set to `192.16.184.5`
+
+This plugin also sets `request.info.remotePort` to the value of the `x-forwarded-port` header
+
+```Javascript
+// register plug-ins
+server.register([
+    Inert,
+    Vision,
+    Blipp,
+	{
+		register: require('therealyou')
+	},	
+    ], function (err) {
+
+        server.start(function(){
+            console.log('Server running at:', server.info.uri);
+			
+        });
+    });
+```
 
 ### Monitoring
 #### Plugins and Tools used 
