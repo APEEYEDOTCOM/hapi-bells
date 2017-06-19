@@ -15,6 +15,19 @@ A Hapi API template with cross cutting concerns baked into the template
    * [Purpose](#purpose)
    * [What is included in the template?](#what-is-included-in-the-template)
 * [Usage](#usage)
+* [Template Usage and Examples](#template-usage-and-examples)
+   * [Documentation](#documentation)
+   * [Request and Response Sanitization](#request-and-response-sanitization)
+   * [CORS Support](#cors-support)
+   * [Policies](#policies)
+   * [Proxy Filter](#proxy-filter)
+   * [Monitoring](#monitoring)
+   * [Security and Data Encryption](#security-and-data-encryption)
+   * [Storage](#storage)
+   * [CRON](#cron)
+   * [Configuration](#configuration)
+   * [Utilities](#utilities)
+   * [SDK Generation](#sdk-generation)
 * [License](#license)
 
 ## Introduction
@@ -45,7 +58,7 @@ Disclaimer: This template was created by novice developers. We are not claiming 
 #### Policies
 * Policies for hapi routes - [mrhorse](https://github.com/mark-bradshaw/mrhorse) by mark-bradshaw 
 
-#### Proxies
+#### Proxy Filter
 * Plugin for setting the request.info.remoteAddress and request.info.remotePort based on the X-Forwarded-For and X-Forwarded-Port headers - [therealyou](https://github.com/briandela/therealyou) by briandela 
 
 #### Monitoring
