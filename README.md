@@ -79,11 +79,14 @@ Disclaimer: This template was created by novice developers. We are not claiming 
 ## Usage
 
 ### Dependancies
-* [Node.js](https://nodejs.org/en/) >= v6.10.3
+* [node.js](https://nodejs.org/en/) >= v6.10.3
+* [npm](https://docs.npmjs.com/getting-started/installing-node) >= v3.10.5
 * [pm2](https://github.com/Unitech/pm2) >= v2.4.0 
 * [autorest](https://github.com/Azure/autorest) >= v1.1.0
 
+### Installing
 With [npm](https://npmjs.org/) installed, run
+
     $ npm install hapi-bells
     
 
