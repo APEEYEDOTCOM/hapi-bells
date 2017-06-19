@@ -15,7 +15,7 @@ A Hapi API template with cross cutting concerns baked into the template
    * [Purpose](#purpose)
    * [Usage](#usage)
    * [What is included in the template?](#what-is-included-in-the-template)
-   * [Template Structure](#template-structure)
+   * [Key Template Folders and Files](#key-template-folders-and-files)
 * [Template Features and Examples](#template-features-and-examples)
    * [Documentation](#documentation)
    * [Request and Response Sanitization](#request-and-response-sanitization)
@@ -84,7 +84,19 @@ Key features included into the template include
 * Logging
 * Load Balancing
 
-### Template Structure
+### Key Template Folders and Files
+* api_server.js - This is the main Hapi server file. In this file you can configure your hapi server and change plugins
+* routes.js - This is the hapi server api routes file. In this file you can set up your API paths. 
+* startup.json - This file is used by pm2 to start the project. In this file you can configure the number of instances of the API to spin up, specify log file locations and give the API a friendly name which will display when running
+
+    $ pm2 monit
+    
+* path_handlers folder - This folder contains the handlers for the API paths. One file is used per group of API paths. 
+* db folder - This folder contains local storage files, used to store whatever is required by the API. 
+* config folder - This folder contains the API configuration JSON file, which can be used to store any configurations the API required. 
+* policies folder - This folder contains all the API policies which can be used to decorate the API path with. 
+* public folder - This folder contains all the elements of the API that would be publically accessible, like the Swagger UI for example.
+* templates folder - This folder contains all the templates required by the API. 
 
 ## Template Features and Examples
 ### Documentation
