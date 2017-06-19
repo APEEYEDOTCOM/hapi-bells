@@ -653,12 +653,55 @@ An optional extra feature you could implement is to encrypt the sqlite database 
 * A hapi plugin to setup cron jobs - [hapi-cron](https://github.com/antonsamper/hapi-cron) by antonsamper 
 
 #### How it was implemented in the API Template
+This plugin is used to setup cron jobs that will call predefined server routes at specified times, for example, the below CRON calls the API_Ping endpoint every 59 seconds. CRON Jobs can be used to automate certain functions like archiving logs files etc.
+
+```Javascript
+// register plug-ins
+server.register([
+    Inert,
+    Vision,
+    Blipp,
+	{
+	register: require('hapi-cron'),
+	options: {
+	 jobs: [{
+		name: 'testcron',
+		time: '59 * * * * * ',
+		timezone: 'Africa/Johannesburg',
+		request: {
+			headers: {'Authorization': 'Bearer d294b4b6-4d65-4ed8-808e-26954168ff48'},
+			method: 'GET',
+			url: 'http://localhost:8082/System/API_Ping/'
+		},
+		callback: (res) => {
+			console.log(res.result)
+			console.info('testcron has run!');
+		}
+	}] 
+	}
+	},
+    ], function (err) {
+
+        server.start(function(){
+            console.log('Server running at:', server.info.uri);
+			
+        });
+    });
+```
 
 ### Configuration 
 #### Plugins and Tools used 
 * Hierarchical configurations for your app deployments - [config](https://github.com/lorenwest/node-config) by lorenwest 
 
 #### How it was implemented in the API Template
+Within the config folder, a default.json file exists to store API wide configurations, or any key/values. 
+
+Accessing values in the config file is relatively straightforward. 
+```Javascript
+const config = require('config');
+
+var param = config.get('KEY.VALUE'),
+```
 
 ### Utilities
 #### Plugins and Tools used 
@@ -670,26 +713,24 @@ An optional extra feature you could implement is to encrypt the sqlite database 
 * Async utilities for node - [async](https://github.com/caolan/async) by caolan 
 * Simple, fast generation of RFC4122 UUIDS - [node-uuid](https://github.com/kelektiv/node-uuid) by kelektiv 
 
-#### How it was implemented in the API Template
 
 ### SDK Generation
 #### Plugins and Tools used 
 * SDK Generation through Swagger (OpenAPI) Specification code generator featuring C# and Razor templates. Supports C#, Java, Node.js, TypeScript, Python and Ruby - [autorest](https://github.com/Azure/autorest) by Azure 
-
-#### How it was implemented in the API Template
 
 ### Logging
 #### Plugins and Tools used 
 * Logging capabilities provided by [pm2](https://github.com/Unitech/pm2) by keymetrics 
 
 #### How it was implemented in the API Template
+Within the startup.json file, the locations for the log files can be specified. 
 
 ### Load Balancing
 #### Plugins and Tools used 
 * Load Balancing capabilities provided by [pm2](https://github.com/Unitech/pm2) by keymetrics 
 
 #### How it was implemented in the API Template
-
+Within the startup.json file, the number of API instance can be specified. 
 
 
 
