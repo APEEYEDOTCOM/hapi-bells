@@ -51,12 +51,15 @@ Disclaimer: This template was created by novice developers. We are not claiming 
 * [autorest](https://github.com/Azure/autorest) >= v1.1.0
 
 ### Installing
-With [npm](https://npmjs.org/) installed, run
+Clone this respository, then 
+
+    $ cd [repository-folder]
+    $ pm2 start startup.json
+
+Or with [npm](https://npmjs.org/) installed, run
 
     $ npm install hapi-bells
-    
-Then, with [pm2](https://github.com/Unitech/pm2) installed, run
-
+    $ cd [repository-folder/node_modules/hapi-bells]
     $ pm2 start startup.json
 
 To access the API Documentation, go to
